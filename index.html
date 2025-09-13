@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaSolvers – Your One‑Stop Java Project Solution</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#2563eb; /* indigo-600 */
+      --primary-700:#1e40af;
+      --accent:#22c55e; /* green-500 */
+      --dark:#0b1220;
+      --muted:#6b7280; /* gray-500 */
+      --light:#f8fafc; /* slate-50 */
+      --card:#ffffff;
+      --gradient: radial-gradient(1200px 400px at 10% -10%, rgba(37,99,235,.25), transparent 60%),
+                  radial-gradient(1000px 300px at 100% 0%, rgba(34,197,94,.18), transparent 60%),
+                  linear-gradient(180deg, #0b1220 0%, #0f172a 100%);
+    }
+    html,body{font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color:#0f172a;}
+    .btn-rounded{border-radius:999px}
+    .section-pad{padding: 72px 0}
+    .nav-link{font-weight:600}
+    .brand{font-family:Manrope, Inter, sans-serif; font-weight:800; letter-spacing:.2px}
+
+    /* HERO */
+    .hero{background:var(--gradient); color:#e5e7eb; position:relative; overflow:hidden}
+    .hero .badge{background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); color:#e5e7eb}
+    .hero h1{color:#fff}
+    .hero .kpi{backdrop-filter: blur(6px); background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); color:#fff}
+    .glow{box-shadow: 0 10px 30px rgba(37,99,235,.35)}
+
+    /* CARDS */
+    .card{border:1px solid #e5e7eb; border-radius:18px}
+    .card .price{font-weight:800; color:var(--primary)}
+    .icon-circle{width:44px; height:44px; border-radius:999px; display:grid; place-items:center; background:#eef2ff; color:var(--primary)}
+
+    /* CTA strip */
+    .cta-strip{background:linear-gradient(90deg, var(--primary) 0%, var(--primary-700) 100%); color:#fff; border-radius:18px}
+
+    /* ABOUT */
+    .stat-card{border-radius:18px; border:1px dashed rgba(15,23,42,.15); background:#fff}
+
+    /* FAQ */
+    .faq .accordion-button:not(.collapsed){color:var(--primary); background:#eef2ff}
+    .faq .accordion-button{font-weight:600}
+
+    /* CONTACT */
+    .contact-card{border-radius:16px; border:1px solid #e5e7eb}
+
+    /* FOOTER */
+    footer{background:#0b1220; color:#94a3b8}
+    footer a{color:#cbd5e1; text-decoration:none}
+    footer a:hover{color:#fff}
+
+    /* utilities */
+    .text-muted-700{color:#475569}
+    .shadow-soft{box-shadow:0 10px 30px rgba(2,8,23,.08)}
+
+    @media(min-width:992px){
+      .hero-img{transform: translateY(10px) rotate(-1deg)}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand brand d-flex align-items-center gap-2" href="#home">
+        <span class="icon-circle"><i class="bi bi-cup-hot-fill"></i></span>
+        JavaSolvers
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-primary btn-rounded px-3" href="#contact"><i class="bi bi-lightning-charge me-1"></i>Get Quote</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <span class="badge rounded-pill px-3 py-2 mb-3"><i class="bi bi-shield-check me-1"></i> Trusted by 500+ Students</span>
+          <h1 class="display-5 fw-bold">Your One‑Stop <span class="text-primary">Java Project</span> Solution</h1>
+          <p class="lead mb-4 text-white-50">Are you a final‑year CSE student looking for a unique, reliable, and ready‑to‑submit project? We specialize in delivering custom Java projects with full documentation and support.</p>
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle-fill text-success"></i>
+              <span>100% Original Code</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle-fill text-success"></i>
+              <span>Full Documentation</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle-fill text-success"></i>
+              <span>One‑to‑One Support</span>
+            </div>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="#contact" class="btn btn-success btn-rounded px-4 glow">Get Started</a>
+            <a href="#services" class="btn btn-outline-light btn-rounded px-4">Explore Services</a>
+          </div>
+          <div class="d-flex gap-3 mt-4">
+            <div class="kpi rounded-4 p-3 text-center">
+              <div class="h4 mb-0">500+</div>
+              <div class="small text-white-50">Happy Students</div>
+            </div>
+            <div class="kpi rounded-4 p-3 text-center">
+              <div class="h4 mb-0">98%</div>
+              <div class="small text-white-50">On‑time Delivery</div>
+            </div>
+            <div class="kpi rounded-4 p-3 text-center">
+              <div class="h4 mb-0">1+</div>
+              <div class="small text-white-50">Years Experience</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <img class="img-fluid rounded-4 shadow-soft hero-img" 
+     alt="Student coding at laptop"
+     src="img/lap.png" />
+
+           <div class="position-absolute bottom-0 start-0 translate-middle-y ms-3 mb-3 bg-dark text-white rounded-4 px-3 py-2 shadow-soft">
+  <i class="bi bi-patch-check-fill text-white me-2"></i>
+  24/7 WhatsApp Support
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SERVICES -->
+  <section id="services" class="section-pad bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Our <span class="text-primary">Services</span></h2>
+        <p class="text-muted-700">We offer a comprehensive range of Java‑based project solutions for final‑year Computer Science students.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Service Card 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body p-4">
+              <div class="icon-circle mb-3"><i class="bi bi-rocket-takeoff"></i></div>
+              <h5 class="fw-bold">Java Mini Projects</h5>
+              <p class="text-muted">Perfect for quick demos & internal submissions. Clean code + README + basic report.</p>
+              <ul class="list-unstyled small mb-3">
+                <li><i class="bi bi-check2 me-2 text-success"></i>Core Java / JDBC</li>
+                <li><i class="bi bi-check2 me-2 text-success"></i>Executable JAR</li>
+                <li><i class="bi bi-check2 me-2 text-success"></i>Guide friendly</li>
+              </ul>
+              <div class="d-flex align-items-center justify-content-between">
+                <span class="price">Starting ₹2,999</span>
+                <a href="#contact" class="btn btn-outline-primary btn-rounded">Get Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body p-4">
+              <div class="icon-circle mb-3"><i class="bi bi-window-sidebar"></i></div>
+              <h5 class="fw-bold">Web‑Based Java Projects</h5>
+              <p class="text-muted">Spring Boot, JSP/Servlets, Hibernate/JPA with MySQL. Clean architecture & docs.</p>
+              <ul class="list-unstyled small mb-3">
+                <li><i class="bi bi-check2 me-2 text-success"></i>REST APIs</li>
+                <li><i class="bi bi-check2 me-2 text-success"></i>Authentication & Roles</li>
+                <li><i class="bi bi-check2 me-2 text-success"></i>Responsive UI (Bootstrap)</li>
+              </ul>
+              <div class="d-flex align-items-center justify-content-between">
+                <span class="price">Starting ₹7,999</span>
+                <a href="#contact" class="btn btn-outline-primary btn-rounded">Get Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body p-4">
+              <div class="icon-circle mb-3"><i class="bi bi-app-indicator"></i></div>
+              <h5 class="fw-bold">Desktop Applications</h5>
+              <p class="text-muted">Swing/JavaFX based robust apps with installers and user guide.</p>
+              <ul class="list-unstyled small mb-3">
+                <li><i class="bi bi-check2 me-2 text-success"></i>Local DB or MySQL</li>
+                <li><i class="bi bi-check2 me-2 text-success"></i>CRUD + Reports</li>
+                <li><i class="bi bi-check2 me-2 text-success"></i>Clean UI</li>
+              </ul>
+              <div class="d-flex align-items-center justify-content-between">
+                <span class="price">Starting ₹6,999</span>
+                <a href="#contact" class="btn btn-outline-primary btn-rounded">Get Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body p-4">
+              <div class="icon-circle mb-3"><i class="bi bi-database"></i></div>
+              <h5 class="fw-bold">MySQL Projects</h5>
+              <p class="text-muted">Schema design, seed data, ER diagrams, and optimized queries.</p>
+              <ul class="list-unstyled small mb-3">
+                <li><i class="bi bi-check2 me-2 text-success"></i>ERD & SQL Scripts</li>
+                <li><i class="bi bi-check2 me-2 text-success"></i>Backup/Restore</li>
+                <li><i class="bi bi-check2 me-2 text-success"></i>Indexes & Joins</li>
+              </ul>
+              <div class="d-flex align-items-center justify-content-between">
+                <span class="price">Starting ₹3,499</span>
+                <a href="#contact" class="btn btn-outline-primary btn-rounded">Get Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body p-4">
+              <div class="icon-circle mb-3"><i class="bi bi-file-earmark-text"></i></div>
+              <h5 class="fw-bold">Complete Documentation</h5>
+              <p class="text-muted">SRS, diagrams, screenshots, and presentation deck following college format.</p>
+              <ul class="list-unstyled small mb-3">
+                <li><i class="bi bi-check2 me-2 text-success"></i>Word/LaTeX/Google Docs</li>
+                <li><i class="bi bi-check2 me-2 text-success"></i>Plagiarism‑safe</li>
+                <li><i class="bi bi-check2 me-2 text-success"></i>Review Iterations</li>
+              </ul>
+              <div class="d-flex align-items-center justify-content-between">
+                <span class="price">Included with all projects</span>
+                <a href="#contact" class="btn btn-outline-primary btn-rounded">Get Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body p-4">
+              <div class="icon-circle mb-3"><i class="bi bi-headset"></i></div>
+              <h5 class="fw-bold">Guidance & Support</h5>
+              <p class="text-muted">1:1 sessions for viva prep, deployment help and last‑minute fixes.</p>
+              <ul class="list-unstyled small mb-3">
+                <li><i class="bi bi-check2 me-2 text-success"></i>WhatsApp/Meet</li>
+                <li><i class="bi bi-check2 me-2 text-success"></i>Bug fixing help</li>
+                <li><i class="bi bi-check2 me-2 text-success"></i>Demo scripts</li>
+              </ul>
+              <div class="d-flex align-items-center justify-content-between">
+                <span class="price">Starting ₹1,999</span>
+                <a href="#contact" class="btn btn-outline-primary btn-rounded">Get Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA strip -->
+      <div class="cta-strip mt-5 p-4 p-lg-5 text-center">
+        <div class="row align-items-center g-3">
+          <div class="col-lg-8 text-lg-start">
+            <h4 class="mb-1">Custom Project Ideas Welcome!</h4>
+            <p class="mb-0 text-white-50">Have a unique problem statement? Share your idea and we’ll craft a complete solution just for you.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end"><a href="#contact" class="btn btn-light btn-rounded px-4"><i class="bi bi-plus-circle me-1"></i>Create New Project</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section-pad">
+    <div class="container">
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-6">
+          <h2 class="fw-bold">About <span class="text-primary">Us</span></h2>
+          <p class="text-muted-700">We are a team of experienced freelance developers committed to helping CSE students complete their final‑year Java projects with ease and excellence.</p>
+          <ul class="list-unstyled">
+            <li class="d-flex gap-2 align-items-start mb-2"><i class="bi bi-award text-primary fs-5"></i><span><strong>Experienced Team:</strong> Real‑world, production‑style projects that impress evaluators.</span></li>
+            <li class="d-flex gap-2 align-items-start mb-2"><i class="bi bi-lightning-charge text-primary fs-5"></i><span><strong>Faster Turnaround:</strong> Strict timelines and frequent demos keep you stress‑free.</span></li>
+            <li class="d-flex gap-2 align-items-start mb-2"><i class="bi bi-shield-lock text-primary fs-5"></i><span><strong>Quality & Integrity:</strong> Original code and proper citations for third‑party resources.</span></li>
+          </ul>
+          <div class="p-3 rounded-4 border bg-light mt-3">
+            <strong>Our Mission</strong>
+            <p class="mb-0 text-muted-700">To empower CS students with thoughtful, original Java projects that not only help them score well but also provide practical knowledge and confidence for their future careers.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="row g-3 h-100">
+            <div class="col-6">
+              <div class="stat-card h-100 p-4 text-center">
+                <div class="display-6 fw-bold text-primary">500+</div>
+                <div class="text-muted">Students</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-card h-100 p-4 text-center">
+                <div class="display-6 fw-bold text-primary">1+</div>
+                <div class="text-muted">Years Experience</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-card h-100 p-4 text-center">
+                <div class="display-6 fw-bold text-primary">98%</div>
+                <div class="text-muted">On‑time Delivery</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-card h-100 p-4 text-center">
+                <div class="display-6 fw-bold text-primary">100%</div>
+                <div class="text-muted">Satisfaction</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section-pad bg-light faq">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Frequently Asked <span class="text-primary">Questions</span></h2>
+        <p class="text-muted-700">Got questions? We’ve got answers. Here are the most common questions from students like you.</p>
+      </div>
+
+      <div class="accordion" id="faqAccordion">
+        <!-- Item -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q1h">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true" aria-controls="q1">Will my final score work with the project?</button>
+          </h2>
+          <div id="q1" class="accordion-collapse collapse show" aria-labelledby="q1h" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">We craft projects aligned with typical university rubrics—problem definition, design, implementation, testing, and documentation—so you cover every scoring criterion.</div>
+          </div>
+        </div>
+        <!-- Item -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q2h">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-controls="q2">Do you provide documentation and reports?</button>
+          </h2>
+          <div id="q2" class="accordion-collapse collapse" aria-labelledby="q2h" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Yes. You get complete documentation (SRS, design diagrams, snapshots) plus a presentation deck and demo script formatted for your college.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q3h">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-controls="q3">Is the project customizable according to my college requirements?</button>
+          </h2>
+          <div id="q3" class="accordion-collapse collapse" aria-labelledby="q3h" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Absolutely. Share the requirements or rubric and we’ll adapt features, tech stack, and the report accordingly.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q4h">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-controls="q4">Is your code 100% original and plagiarism‑free?</button>
+          </h2>
+          <div id="q4" class="accordion-collapse collapse" aria-labelledby="q4h" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Yes. We deliver unique solutions written from scratch. We can also run plagiarism checks on request.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q5h">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-controls="q5">How do I share my project requirements?</button>
+          </h2>
+          <div id="q5" class="accordion-collapse collapse" aria-labelledby="q5h" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Use the contact form below or ping us on WhatsApp with your topic, deadline, and any provided templates.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q6h">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-controls="q6">What payment methods do you accept?</button>
+          </h2>
+          <div id="q6" class="accordion-collapse collapse" aria-labelledby="q6h" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">UPI, bank transfer, and cards via secure gateway. Milestone‑based payments available for large projects.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <div class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-5 bg-white border shadow-soft">
+          <i class="bi bi-chat-dots"></i>
+          Still have questions?
+          <a class="btn btn-sm btn-primary ms-2" href="#contact"><i class="bi bi-telephone me-1"></i>Call Us</a>
+          <a class="btn btn-sm btn-success" href="#contact"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section-pad">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Get In <span class="text-primary">Touch</span></h2>
+        <p class="text-muted-700">Ready to start your project? Let’s connect and make your Java project a success!</p>
+      </div>
+
+      <div class="row g-4 mb-4">
+        <div class="col-md-4">
+          <div class="contact-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-2"><span class="icon-circle"><i class="bi bi-telephone"></i></span><h6 class="mb-0">Call Us</h6></div>
+            <div class="small text-muted">One‑to‑one consultation</div>
+            <a href="tel:+917888009430" class="fw-semibold d-block mt-2">+91 78880 09430</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-2"><span class="icon-circle"><i class="bi bi-whatsapp"></i></span><h6 class="mb-0">WhatsApp</h6></div>
+            <div class="small text-muted">Instant messaging support</div>
+            <a href="https://wa.me/917888009430" class="fw-semibold d-block mt-2">+91 78880 09430</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-2"><span class="icon-circle"><i class="bi bi-envelope"></i></span><h6 class="mb-0">Email</h6></div>
+            <div class="small text-muted">Detailed project discussion</div>
+            <a href="mailto:jaygunjawale1010@gmail.com" class="fw-semibold d-block mt-2">jaygunjawale1010@gmail.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="card shadow-soft">
+            <div class="card-body p-4">
+              <h5 class="fw-bold mb-3">Send us a Message</h5>
+              <form id="contact-form" class="row g-3">
+  <div class="col-md-6">
+    <label class="form-label">Your Name</label>
+    <input type="text" id="name" name="user_name" class="form-control" placeholder="Full name" required>
+  </div>
+  <div class="col-md-6">
+    <label class="form-label">Email</label>
+    <input type="email" id="email" name="user_email" class="form-control" placeholder="you@example.com" required>
+  </div>
+  <div class="col-md-6">
+    <label class="form-label">Phone</label>
+    <input type="tel" id="phone" name="user_phone" class="form-control" placeholder="WhatsApp number" required>
+  </div>
+  <div class="col-md-6">
+    <label class="form-label">Project Type</label>
+    <select id="project" name="project_type" class="form-select">
+      <option>Web (Spring Boot / JSP)</option>
+      <option>Desktop (Swing/JavaFX)</option>
+      <option>Mini Project</option>
+      <option>MySQL / Database</option>
+      <option>Only Documentation</option>
+    </select>
+  </div>
+  <div class="col-12">
+    <label class="form-label">Project Requirements</label>
+    <textarea id="requirements" name="message" class="form-control" rows="4" placeholder="Briefly describe your topic, deadline, and any college format..." required></textarea>
+  </div>
+  <div class="col-12 d-flex gap-2">
+    <button type="submit" class="btn btn-primary btn-rounded">Send Message</button>
+    <a href="https://wa.me/917888009430" class="btn btn-success btn-rounded"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+  </div>
+</form>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="card h-100 shadow-soft">
+            <div class="card-body p-4">
+              <h5 class="fw-bold">Working Hours</h5>
+              <p class="mb-3 text-muted-700">Monday – Sunday <span class="ms-1 badge bg-light text-dark border">10:00 AM – 8:00 PM IST</span></p>
+              <h6 class="fw-semibold">Location</h6>
+              <p class="text-muted-700">BAIF Road, Wagholi, Pune – 412207, India<br>Remote support available for all regions.</p>
+              <div class="ratio ratio-4x3 rounded-4 overflow-hidden">
+                <iframe title="Map" src="https://maps.google.com/maps?q=Wagholi%2C%20Pune&t=&z=12&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="d-flex align-items-center gap-2 mb-2 brand text-white"><span class="icon-circle bg-white text-dark"><i class="bi bi-cup-hot-fill"></i></span>JavaSolvers</div>
+          <p class="mb-2">Trusted partner for simple, high‑quality Java projects with documentation & support.</p>
+          <div class="small">© <span id="year"></span> JavaSolvers. All rights reserved.</div>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white">Quick Links</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-white">Our Services</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#services">Java Web Projects</a></li>
+            <li><a href="#services">Desktop Apps</a></li>
+            <li><a href="#services">Mini Projects</a></li>
+            <li><a href="#services">Documentation</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-white">Get in Touch</h6>
+          <ul class="list-unstyled small">
+            <li><a href="tel:+917888009430"><i class="bi bi-telephone me-1"></i> +91 78880 09430</a></li>
+            <li><a href="mailto:jaygunjawale1010@gmail.com"><i class="bi bi-envelope me-1"></i> jaygunjawale1010@gmail.com</a></li>
+            <li><a href="https://wa.me/917888009430"><i class="bi bi-whatsapp me-1"></i> WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top border-secondary mt-4 pt-3 small d-flex justify-content-between flex-wrap">
+        <div>Privacy Policy • Terms & Conditions</div>
+        <div>Made with <i class="bi bi-heart-fill text-danger"></i> for students</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/917888009430" class="position-fixed bottom-0 end-0 m-4 btn btn-success btn-lg rounded-circle shadow" style="width:56px;height:56px;display:grid;place-items:center; z-index:1080" aria-label="WhatsApp">
+    <i class="bi bi-whatsapp fs-4"></i>
+  </a>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("ZbVLD9DQ8PW0ktgNG"); // Replace with your EmailJS Public Key
+    })();
+  </script>
+
+  <!-- Custom Scripts -->
+  <script>
+    // Smooth scroll for same-page links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if (id.length > 1 && document.querySelector(id)) {
+          e.preventDefault();
+          document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Contact Form Submission
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        emailjs.sendForm('service_fh6qe5f', 'template_cxiwz3m', this)
+          .then(function () {
+            alert('✅ Message sent successfully!');
+            contactForm.reset();
+          }, function (error) {
+            alert('❌ Failed to send message. Please try again.');
+            console.log('Error:', error);
+          });
+      });
+    }
+  </script>
+</body>
+</html>
+
